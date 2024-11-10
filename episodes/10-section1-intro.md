@@ -44,7 +44,7 @@ flowchart LR
   software environment
 
   - Isolate and run code: command line, virtual environment & IDE
-  - Version control and share code: Git & GitHub
+  - Version control and share code: Git & GitLab
   - Write well-written code: PEP8)
 
   A -> B(2. Verifying software correctness)
@@ -72,7 +72,7 @@ your issue may be solved there.
 We will use the [command line](https://en.wikipedia.org/wiki/Shell_\(computing\))
 (also known as the command line shell/prompt/console)
 to run our Python code
-and interact with the version control tool Git and software sharing platform GitHub.
+and interact with the version control tool Git and software sharing platform GitLab.
 We will also use command line tools
 [`venv`](https://docs.python.org/3/library/venv.html)
 and [`pip`](https://pip.pypa.io/en/stable/)
@@ -101,14 +101,14 @@ and command line tools you may use in the future
 We will use [PyCharm](https://www.jetbrains.com/pycharm/) in this course -
 a free, open source IDE.
 
-### Git \& GitHub
+### Git \& GitLab
 
 [Git](https://git-scm.com/) is a free and open source distributed version control system
 designed to save every change made to a (software) project,
 allowing others to collaborate and contribute.
-In this course, we use Git to version control our code in conjunction with [GitHub](https://github.com/)
+In this course, we use Git to version control our code in conjunction with [GitLab](https://gitlab.com/)
 for code backup and sharing.
-GitHub is one of the leading integrated products and social platforms
+GitLab is one of the leading integrated products and social platforms
 for modern software development, monitoring and management -
 it will help us with
 version control,

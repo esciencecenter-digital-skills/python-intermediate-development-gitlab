@@ -21,7 +21,7 @@ exercises: 0
 
 ## Introduction
 
-So far we have cloned our software project from GitHub and inspected its contents and architecture a bit.
+So far we have cloned our software project from GitLab and inspected its contents and architecture a bit.
 We now want to run our code to see what it does -
 let us do that from the command line.
 For the most part of the course we will run our code
@@ -209,7 +209,7 @@ You can test your Python installation from the command line with:
 
 ```bash
 $ python3 --version # on Mac/Linux
-$ python --version # on Windows — Windows installation comes with a python.exe file rather than a python3.exe file 
+$ python --version # on Windows — Windows installation comes with a python.exe file rather than a python3.exe file
 ```
 
 If you are using Windows and invoking `python` command causes your Git Bash terminal to hang with no error message or output, you may
@@ -312,7 +312,7 @@ Here are some references for each of the naming conventions:
 - [The Python Documentation](https://docs.python.org/3/library/venv.html)
   indicates that ".venv" is common
 - ["venv" vs ".venv" discussion](https://discuss.python.org/t/trying-to-come-up-with-a-default-directory-name-for-virtual-environments/3750)
-  
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -449,7 +449,7 @@ Version: 1.26.2
 Summary: Fundamental package for array computing in Python
 Home-page: https://numpy.org
 Author: Travis E. Oliphant et al.
-Author-email: 
+Author-email:
 License: Copyright (c) 2005-2023, NumPy Developers.
 All rights reserved.
 ...
@@ -602,7 +602,7 @@ from your virtual environment)
 is update the contents of the `requirements.txt` file accordingly
 by re-issuing `pip freeze` command
 and propagate the updated `requirements.txt` file to your collaborators
-via your code sharing platform (e.g. GitHub).
+via your code sharing platform (e.g. GitLab).
 
 :::::::::::::::::::::::::::::::::::::  testimonial
 
