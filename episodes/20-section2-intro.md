@@ -47,7 +47,7 @@ flowchart LR
   A -> B(2. Verifying software correctness
 
   - Test frameworks
-  - Automate and scale testing: CI and GitHub Actions
+  - Automate and scale testing: CI and GitLab CI/CD
   - Debug code)
 
   B -> C(3. Software development as a process)
@@ -63,7 +63,7 @@ In this section we will:
   to verify the correct behaviour of code and identify faults,
   making use of test **parameterisation**
   to increase the number of different test cases we can run.
-- Automatically run a set of unit tests using **GitHub Actions** -
+- Automatically run a set of unit tests using **GitLab CI/CD** -
   a **Continuous Integration** infrastructure that allows us to
   automate tasks when things happen to our code,
   such as running those tests when a new commit is made to a code repository.
