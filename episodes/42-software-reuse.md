@@ -141,7 +141,7 @@ some extra syntax to provide ways of formatting them.
 A big advantage of them is that they can be read as plain-text files
 or as source files for rendering them with formatting structures,
 and are very quick to write.
-GitHub provides a very useful [guide to writing Markdown][github-markdown] for its repositories.
+GitHub provides a very useful [guide to writing Markdown][github-markdown] that also applies to GitLab.
 
 Let us start writing `README.md` using a text editor of your choice and add the following line.
 
@@ -213,18 +213,20 @@ with some text describing the link within `[]` followed by the link itself withi
 One really neat feature - and a common practice - of using many CI infrastructures is that
 we can include the status of running recent tests within our README file.
 Just below the `# Inflam` title on our README.md file,
-add the following (replacing `<your_github_username>` with your own:
+add the following (replacing `<namespace>` and `<name>` with your own):
 
 ```markdown
 # Inflam
-![Continuous Integration build in GitHub Actions](https://github.com/<your_github_username>/python-intermediate-inflammation/actions/workflows/main.yml/badge.svg?branch=main)
+![Continuous Integration build in GitLab CI/CD](https://ci.tno.nl/gitlab/<namespace>/python-intermediate-inflammation/badges/main/pipeline.svg?ignore_skipped=true)
 ...
 ```
 
 This will embed a *badge* (icon) at the top of our page that
-reflects the most recent GitHub Actions build status of your software repository,
+reflects the most recent GitLab CI/CD build status of your software repository,
 essentially showing whether the tests that were run
 when the last change was made to the `main` branch succeeded or failed.
+
+For more details, see the [pipeline status badges](https://docs.gitlab.com/user/project/badges/) documentation page.
 
 That's got us started with documenting our code,
 but there are other aspects we should also cover:
@@ -368,9 +370,9 @@ $ git push origin main
 
 The software on your `main` branch is now ready for release.
 
-## Tagging a Release in GitHub
+## Tagging a Release in GitLab
 
-There are many ways in which Git and GitHub can help us make a software release from our code.
+There are many ways in which Git and GitLab can help us make a software release from our code.
 One of these is via **tagging**,
 where we attach a human-readable label to a specific commit.
 Let us see what tags we currently have in our repository:
@@ -432,7 +434,7 @@ index 4818abb..5b8e7fd 100644
 +## Installation
 +- Clone the repo ``git clone repo``
 +- Check everything runs by running ``python -m pytest`` in the root directory
-+- Hurray 
++- Hurray
 +
 +## Contributing
 +- Create an issue [here](https://github.com/Onoddil/python-intermediate-inflammation/issues)
@@ -459,7 +461,7 @@ index 4818abb..5b8e7fd 100644
 \ No newline at end of file
 ```
 
-So now we have added a tag, we need this reflected in our Github repository.
+So now we have added a tag, we need this reflected in our GitLab project.
 You can push this tag to your remote by doing:
 
 ```bash
@@ -487,7 +489,7 @@ e.g. 1.0.0-alpha1 (first alpha release) or 1.2.3-beta4 (fourth beta release)
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 We can now use the more memorable tag to refer to this specific commit.
-Plus, once we have pushed this back up to GitHub,
+Plus, once we have pushed this back up to GitLab,
 it appears as a specific release within our code repository
 which can be downloaded in compressed `.zip` or `.tar.gz` formats.
 Note that these downloads just contain the state of the repository at that commit,
@@ -503,7 +505,7 @@ but tagging with a specific version number makes that just a little bit easier f
 
 We may also wish to make data available to either
 be used with the software or as generated results.
-This may be via GitHub or some other means.
+This may be via GitLab or some other means.
 An important aspect to remember with sharing data on such systems is that
 they may reside in other countries,
 and we must be careful depending on the nature of the data.
