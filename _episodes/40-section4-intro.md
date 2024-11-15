@@ -29,7 +29,7 @@ as well as increasing knowledge about the codebase across the team.
 We will thus look at the benefits of reviewing code,
 in particular, the value of this type of activity within a team,
 and how this can fit within various ways of team working.
-We will see how GitHub can support code review activities via pull requests,
+We will see how GitLab can support code review activities via merge requests,
 and how we can do these ourselves making use of best practices.
 
 After that, we will look at some general principles of software maintainability

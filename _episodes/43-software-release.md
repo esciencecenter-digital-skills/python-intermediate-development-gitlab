@@ -202,7 +202,7 @@ This is because someone installing our software through a tool like `pip` is onl
 but probably does not intend to contribute to the development of our software
 and does not require development dependencies.
 
-In contrast, if someone downloads our code from GitHub,
+In contrast, if someone downloads our code from GitLab,
 together with our `pyproject.toml`,
 and installs the project that way,
 they will get both our runtime and development dependencies.
