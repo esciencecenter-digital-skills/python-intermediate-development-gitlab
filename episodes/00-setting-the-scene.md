@@ -58,7 +58,7 @@ are transferable to other similar tools and programming languages.
 
 The course is organised into the following sections:
 
-![Course overview diagram](fig/course-overview.svg){alt="Course overview diagram. Arrows connect the following boxed text in order: 1) Setting up software environment 2) Verifying software correctness 3) Software development as a process 4) Collaborative development for reuse 5) Managing software over its lifetime."}
+![Course overview diagram](fig/course-overview.svg){alt="Course overview diagram. Arrows connect the following boxed text in order: 1) Setting up software environment 2) Verifying software correctness 3) Software development as a process 4) Collaborative development for reuse"}
 
 <!---
 Source of the above image can be rendered in the Mermaid live editor:
@@ -68,10 +68,14 @@ The mermaid source is (with one less dash in arrows than needed):
 
 ```mermaid
 flowchart LR
-  A(1. Setting up software environment) -> B(2. Verifying software correctness)
-  B -> C(3. Software development as a process)
-  C -> D(4. Collaborative development for reuse)
-  D -> E(5. Managing software over its lifetime)
+A[1. Setting up
+software environment]
+-> B[2. Verifying
+software correctness]
+-> C[3. Software development
+as a process]
+-> D[4. Collaborative
+development for reuse]
 ```
 -->
 
@@ -127,19 +131,6 @@ on a group project (as you would do when collaborating on a software project in 
   **tracking issues**,
   **supporting** your software,
   and **packaging software** for release to others.
-
-### [Section 5: Managing and Improving Software Over Its Lifetime](50-section5-intro.md)
-
-Finally, we move beyond just software development to managing a collaborative software project and will look into:
-
-- internal **planning and prioritising tasks** for future development
-  using agile techniques and effort estimation,
-  management of **internal and external communication**,
-  and **software improvement** through feedback.
-- how to adopt a critical mindset not just towards our own software project
-  but also to **assess other people's software to ensure it is suitable** for us to reuse,
-  identify areas for improvement,
-  and how to use GitLab to register good quality issues with a particular code repository.
 
 ## Before We Start
 
