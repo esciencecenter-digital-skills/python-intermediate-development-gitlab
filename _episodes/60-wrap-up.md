@@ -127,6 +127,5 @@ Below are some additional resources to help you continue learning:
   (Findable, Accessible, Interoperable, and Reusable)
   software practices][coderefinery-lessons]
 - [Python documentation][python-documentation]
-- [GitHub Actions documentation][github-actions]
 
 {% include links.md %}
