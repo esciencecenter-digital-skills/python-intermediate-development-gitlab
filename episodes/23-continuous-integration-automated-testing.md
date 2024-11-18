@@ -242,7 +242,8 @@ These are the steps that will work for most setups:
 [TNO Coding guild Docker guide](https://codingguild.tno.nl/coding-at-tno/programming-environments/?h=docker#docker (VPN needed))
 
 ### 1. Install the GitLab runner through docker
-Optional: In MacOS systems, /srv does not exist by default. Create /private/srv, or another private directory, for setup.
+**Note**: In MacOS systems, /srv does not exist by default. Create `$HOME/srv` (with `mkdir $HOME/srv`), or another private directory, for setup.
+This requires that you also update the following command. Replace `/srv` with `$HOME/srv`.
 
 ```bash
 docker run -d --name gitlab-runner --restart always \
