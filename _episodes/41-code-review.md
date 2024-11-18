@@ -508,7 +508,7 @@ discussing what the best solution is in person can help defuse this.
    merge the changes onto the base branch.
    Typically, it is the code author's responsibility to merge
    but this may differ from team to team.
-   In our case, you will merge the changes on the PR on your repository.
+   In our case, you will merge the changes on the MR on your repository.
 2. Delete the merged branch to reduce the clutter in the repository.
 
 ## Writing Easy-To-Review Code
