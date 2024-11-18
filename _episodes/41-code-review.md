@@ -212,7 +212,7 @@ on your repository (acting as a code author).
 1. Head over to your software repository in GitLab.
 2. Navigate to the merge requests tab.
 3. Create a new merge request by clicking the blue `New merge request` button.
-   ![GitLab pull requests tab](../fig/gitlab-merge-request-tab.png){: .image-with-shadow width="900px"}
+   ![GitLab merge requests tab](../fig/gitlab-merge-request-tab.png){: .image-with-shadow width="900px"}
 4. Select the base and the compare branch - `develop` and `feature-std-dev`, respectively.
    Recall that the base branch is where you want your changes to be merged
    and the compare branch contains the changes.
