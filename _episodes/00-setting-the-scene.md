@@ -57,23 +57,18 @@ are transferable to other similar tools and programming languages.
 
 The course is organised into the following sections:
 
-{% comment %}
-![Course overview diagram](../fig/course-overview.png){: .image-with-shadow width="800px" }
-{% endcomment %}
 
 ![Course overview diagram](../fig/course-overview.svg){: .image-with-shadow width="1000px" }
 {% comment %}
 flowchart LR
-A(1. Setting up
-software environment)
---> B(2. Verifying
-software correctness)
---> C(3. Software development
-as a process)
---> D(4. Collaborative
-development for reuse)
---> E(5. Managing software
-over its lifetime)
+A[1. Setting up
+software environment]
+--> B[2. Verifying
+software correctness]
+--> C[3. Software development
+as a process]
+--> D[4. Collaborative
+development for reuse]
 
 https://mermaid.live/edit#pako:eNpdkE1rwzAMhv-K8CmFNrCvSw6D9eO2XlbYYeSiJXJqcKwgKyml9L_PaZox5pOQn8ey3oupuCZTGOv5VB1RFN4_ygDpvGUPORxI1YUG-m5qRrZ6QiGgMDjh0FLQBZRhtXqFdfaYwyeJs-ek_OMrFqFKA8U485vsKQ2YgZoG8tyND8LkYgSETrganUnZZs85bNh7_GZBdQPd2b-2ZQGhPtJd2mUvOewxYDNu8vujSeSBBJxG8M6SupYWZmlakhZdnWK5jFRp9EgtlaZIZU0We6-lKcM1odgrH86hMoVKT0vTdzUqbR02gq0pLPqYulQ7ZdlPUd8Sn8nd7Wa2OwxfzLN3_QE4H4oo
 
@@ -127,18 +122,6 @@ on a group project (as you would do when collaborating on a software project in 
   **tracking issues**,
   **supporting** your software,
   and **packaging software** for release to others.
-
-### [Section 5: Managing and Improving Software Over Its Lifetime](../50-section5-intro/index.html)
-Finally, we move beyond just software development to managing a collaborative software project and will look into:
-
-- internal **planning and prioritising tasks** for future development
-  using agile techniques and effort estimation,
-  management of **internal and external communication**,
-  and **software improvement** through feedback.
-- how to adopt a critical mindset not just towards our own software project
-  but also to **assess other people's software to ensure it is suitable** for us to reuse,
-  identify areas for improvement,
-  and how to use GitLab to register good quality issues with a particular code repository.
 
 ## Before We Start
 
