@@ -302,7 +302,7 @@ To that end, here are a few things you *should not* be trying to spot when revie
 
 - Linting issues, or anything else that an automated tool can spot - get the Continuous Integration (CI) to do it.
 - Bugs - instead make sure there are tests for all cases.
-- Issues that pre-date the change - raise separate PRs fixing these issues separately to avoid heading down a rabbit hole.
+- Issues that pre-date the change - raise separate MRs fixing these issues separately to avoid heading down a rabbit hole.
 - Architecture re-writes - try to have design discussions upfront,
   or else have a meeting to decide whether the code needs to be rewritten.
 
@@ -499,7 +499,7 @@ Your list might include the following:
 6. Standard deviation function should give correct result given negative inputs.
 7. Function should work with numpy arrays.
 
-Looking at the tests in the PR, you might be content that tests for 1, 4 and 7 are present
+Looking at the tests in the MR, you might be content that tests for 1, 4 and 7 are present
 so you would request changes to add tests 2, 3, 5 and 6.
 
 In looking at the tests, you may have noticed that the test for numpy arrays is currently
@@ -557,7 +557,7 @@ This tells the author you are happy for them to merge the merge request.
   merge the changes onto the base branch.
   Typically, it is the code author's responsibility to merge
   but this may differ from team to team.
-  In our case, you will merge the changes on the PR on your repository.
+  In our case, you will merge the changes on the MR on your repository.
 
 2. Delete the merged branch to reduce the clutter in the repository.
 
@@ -614,7 +614,7 @@ Specifically:
   know a better way.
 - If a conversation is taking place on a review and has not been resolved by a
   single back-and-forth exchange, then schedule a conversation to discuss instead
-  (and record the outcome of the discussion in the PR's comments).
+  (and record the outcome of the discussion in the MR's comments).
 
 ## Defining a Review Process For Your Team
 
@@ -625,10 +625,10 @@ One way to foster this is to agree on the review process as a team and consider,
 
 - Whether all changes need to go through code review
 - What technologies you are going to use to manage the review process
-- How quickly you expect someone to review the code once a PR has been raised
+- How quickly you expect someone to review the code once a MR has been raised
 - How long should be spent reviewing code
-- What kind of issues are (and are not) appropriate to raise in a PR
-- How will someone know when they are expected to take action (e.g. review a PR).
+- What kind of issues are (and are not) appropriate to raise in a MR
+- How will someone know when they are expected to take action (e.g. review a MR).
 
 You could also consider using merge request states in GitLab:
 
@@ -642,9 +642,9 @@ Once you have agreed on a review process, you should monitor (either formally or
 informally) how well it is working.
 
 It is important that reviews are processed quickly, to avoid costly context switching for the
-code author moving on to work on other things and coming back to their PR.
-Try and set the targets for when you would want the first review submitted on a PR
-and the PR merged, based on how your team works.
+code author moving on to work on other things and coming back to their MR.
+Try and set the targets for when you would want the first review submitted on a MR
+and the MR merged, based on how your team works.
 If you are regularly missing your targets, then you should review your process to identify
 where things are getting stuck and work out what you can do to move things along.
 
