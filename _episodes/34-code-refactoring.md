@@ -82,8 +82,8 @@ the tests at all.
 
 > ## Exercise: Write Regression Tests
 > Modify the `analyse_data()` function not to plot a graph and return the data instead.
-> Then, adapt the test `test_analyse_data_mock_source.py` in the `tests` folder and 
-> add a regression test to verify the current output of `analyse_data()`. We will use this test
+> Then, adapt the test `test_analyse_data_mock_source` in the file `test_compute_data.py`  in the `tests` folder and 
+> turn it into a regression test to verify the current output of `analyse_data()`. We will use this test
 > in the remainder of this section to verify the output `analyse_data()` is unchanged each time
 > we refactor or change code in the future. 
 > 
