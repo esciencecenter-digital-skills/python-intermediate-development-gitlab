@@ -87,7 +87,7 @@ the tests at all.
 ## Exercise: Write Regression Tests
 
 Modify the `analyse_data()` function not to plot a graph and return the data instead.
-Then, add a new test file called `test_compute_data.py` in the `tests` folder and
+Then, adapt the test file  `test_analyse_data_mock_source.py` in the `tests` folder and
 add a regression test to verify the current output of `analyse_data()`. We will use this test
 in the remainder of this section to verify the output `analyse_data()` is unchanged each time
 we refactor or change code in the future.
@@ -95,11 +95,14 @@ we refactor or change code in the future.
 Start from the skeleton test code below:
 
 ```python
-from inflammation.compute_data import analyse_data
+from unittest.mock import Mock
 
 def test_analyse_data():
-    path = os.path.join( os.getcwd(), "../data")
-    data_source = CSVDataSource(path)
+    from inflammation.compute_data import analyse_data
+    data_source = Mock()
+    datasource.load_inflammation_data.return_value = [[[0, 2, 0]],
+                                                      [[0, 1, 0]]]
+
     result = analyse_data(data_source)
     # TODO: add assert statement(s) to test the result value is as expected
 ```
@@ -133,19 +136,14 @@ Putting this together, our test may look like:
 
 ```python
 import numpy.testing as npt
-from inflammation.compute_data import analyse_data
+from unittest.mock import Mock
 
 def test_analyse_data():
-    path = os.path.join( os.getcwd(), "../data")
-    data_source = CSVDataSource(path)
+    data_source = Mock()
+    data_source.load_inflammation_data.return_value = [[[0, 2, 0]],
+                                                       [[0, 1, 0]]]
     result = analyse_data(data_source)
-    expected_output = [0.,0.22510286,0.18157299,0.1264423,0.9495481,0.27118211,
-                       0.25104719,0.22330897,0.89680503,0.21573875,1.24235548,0.63042094,
-                       1.57511696,2.18850242,0.3729574,0.69395538,2.52365162,0.3179312,
-                       1.22850657,1.63149639,2.45861227,1.55556052,2.8214853,0.92117578,
-                       0.76176979,2.18346188,0.55368435,1.78441632,0.26549221,1.43938417,
-                       0.78959769,0.64913879,1.16078544,0.42417995,0.36019114,0.80801707,
-                       0.50323031,0.47574665,0.45197398,0.22070227]
+    expected_output = [0., 0.5, 0.]
     npt.assert_array_almost_equal(result, expected_output)
 ```
 
@@ -327,31 +325,31 @@ There are no definite rules in software design but making your complex logic out
 composed pure functions is a great place to start when trying to make your code readable,
 testable and maintainable. This is particularly useful for:
 
-* Data processing and analysis 
+* Data processing and analysis
 (for example, using [Python Pandas library](https://pandas.pydata.org/) for data manipulation where most of functions appear pure)
 * Doing simulations (? needs more explanation)
 * Translating data from one format to another (? an example would be good)
 
 ## Programming Paradigms
 
-Until this section, we have mainly been writing procedural code. 
-In the previous episode, we have touched a bit upon classes, encapsulation and polymorphism, 
+Until this section, we have mainly been writing procedural code.
+In the previous episode, we have touched a bit upon classes, encapsulation and polymorphism,
 which are characteristics of (but not limited to) the object-oriented programming (OOP).
-In this episode, we mentioned [pure functions](./index.html#pure-functions) 
+In this episode, we mentioned [pure functions](./index.html#pure-functions)
 and Functional Programming.
 
-These are examples of different [programming paradigms](../learners/programming-paradigms.md) 
-and provide varied approaches to structuring your code - 
-each with certain strengths and weaknesses when used to solve particular types of problems. 
-In many cases, particularly with modern languages, a single language can allow many different 
+These are examples of different [programming paradigms](../learners/programming-paradigms.md)
+and provide varied approaches to structuring your code -
+each with certain strengths and weaknesses when used to solve particular types of problems.
+In many cases, particularly with modern languages, a single language can allow many different
 structural approaches and mixing programming paradigms within your code.
-Once your software begins to get more complex - it is common to use aspects of [different paradigm](../learners/programming-paradigms.md) 
-to handle different subtasks. 
-Because of this, it is useful to know about the [major paradigms](../learners/programming-paradigms.md), 
-so you can recognise where it might be useful to switch. 
-This is outside of scope of this course - we have some extra episodes on the topics of 
-[procedural programming](../learners/procedural-programming.md), 
-[functional programming](../learners/functional-programming.md) and 
+Once your software begins to get more complex - it is common to use aspects of [different paradigm](../learners/programming-paradigms.md)
+to handle different subtasks.
+Because of this, it is useful to know about the [major paradigms](../learners/programming-paradigms.md),
+so you can recognise where it might be useful to switch.
+This is outside of scope of this course - we have some extra episodes on the topics of
+[procedural programming](../learners/procedural-programming.md),
+[functional programming](../learners/functional-programming.md) and
 [object-oriented programming](../learners/object-oriented-programming.md) if you want to know more.
 
 ::: callout
