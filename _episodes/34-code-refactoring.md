@@ -209,15 +209,12 @@ be harder to test but, when simplified like this, may only require a handful of 
 >> The `analyse_data()` function now calls the `compute_standard_deviation_by_day()` function, 
 >> while keeping all the logic for reading the data, processing it and showing it in a graph:
 >> ```python
->> def analyse_data(data_dir):
+>> def analyse_data(data_source):
 >>     """Calculates the standard deviation by day between datasets.
 >>     Gets all the inflammation data from CSV files within a directory, works out the mean
 >>     inflammation value for each day across all datasets, then visualises the
 >>     standard deviation of these means on a graph."""
->>     data_file_paths = glob.glob(os.path.join(data_dir, 'inflammation*.csv'))
->>     if len(data_file_paths) == 0:
->>         raise ValueError(f"No inflammation csv's found in path {data_dir}")
->>     data = map(models.load_csv, data_file_paths)
+>>     data = data_source.load_inflammation_data()
 >>     daily_standard_deviation = compute_standard_deviation_by_day(data)
 >>
 >>     graph_data = {
