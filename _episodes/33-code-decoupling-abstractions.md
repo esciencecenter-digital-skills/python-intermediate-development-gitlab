@@ -347,17 +347,29 @@ data sources with no extra work.
 > ## Exercise: Add an Additional DataSource
 > Create another class that supports loading patient data from JSON files, with the 
 > appropriate `load_inflammation_data()` method.
-> There is a function in `models.py` that loads from JSON in the following format:
-> ```json
-> [
->   {
->     "observations": [0, 1]
->   },
->   {
->     "observations": [0, 2]
->   }
-> ]
+> Here is an example function that loads observations from a JSON file:
+> ```python
+> def load_json(filename):
+>    """Load a numpy array from a JSON document.
+>
+>    Expected format:
+>    [
+>        {
+>            observations: [0, 1]
+>        },
+>        {
+>            observations: [0, 2]
+>        }
+>    ]
+>
+>    :param filename: Filename of CSV to load
+>
+>    """
+>    with open(filename, 'r', encoding='utf-8') as file:
+>        data_as_json = json.load(file)
+>        return [np.array(entry['observations']) for entry in data_as_json]
 > ```
+> 
 > Finally, at run-time, construct an appropriate data source instance based on the file extension.
 >> ## Solution
 >> The class that reads inflammation data from JSON files could look something like:
