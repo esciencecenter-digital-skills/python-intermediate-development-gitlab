@@ -197,7 +197,7 @@ In addition, implementation of the method `get_area()` is hidden too (abstractio
 > `load_inflammation_data()` function we wrote in the previous exercise as a method of this class.
 > The directory path where to load the files from should be passed in the class' constructor method.
 > Finally, construct an instance of the class `CSVDataSource` outside the statistical 
-> analysis and pass it to `analyse_data()` function.
+> analysis and pass it to the `analyse_data()` function in the file `inflammation-analysis.py`.
 >> ## Hint
 >> At the end of this exercise, the code in the `analyse_data()` function should look like:
 >> ```python
@@ -229,7 +229,7 @@ In addition, implementation of the method `get_area()` is hidden too (abstractio
 >>         data = map(models.load_csv, data_file_paths)
 >>         return list(data)
 >> ```
->> In the controller, we create an instance of CSVDataSource and pass it 
+>> In the controller (in `inflammation-analysis.py`) , we create an instance of CSVDataSource and pass it 
 >> into the the statistical analysis function.
 >>
 >> ```python
