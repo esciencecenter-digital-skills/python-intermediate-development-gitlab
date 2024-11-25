@@ -229,8 +229,6 @@ You should talk to your system administrator to setup dedicated runners for you.
 You can also use gitlab.com's runners for free if you provide your credit/debit card details,
 read more [here](https://about.gitlab.com/pricing/#why-do-i-need-to-enter-credit-debit-card-details-for-free-compute-minutes)
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Exercise (Optional): Install self-managed GitLab runner.
@@ -254,7 +252,7 @@ docker run -d --name gitlab-runner --restart always \
 ```
 ### 2. Create a shared runner (via GitLab interface)
 
-`Build -> Runners -> New group runner (Select Run untagged jobs) -> Create runner`
+`Settings -> CI/CD -> Runners -> New runner (Select Run untagged jobs) -> Create runner`
 
 You will see a command to register you runner, copy it and paste in the following step.
 
