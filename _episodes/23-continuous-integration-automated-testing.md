@@ -257,7 +257,7 @@ read more [here](https://about.gitlab.com/pricing/#why-do-i-need-to-enter-credit
 > ```
 > ### 2. Create a shared runner (via GitLab interface)
 > 
-> `Build -> Runners -> New group runner (Select Run untagged jobs) -> Create runner`
+> `Settings -> CI/CD -> Runners -> New runner (Select Run untagged jobs) -> Create runner`
 > 
 > You will see a command to register you runner, copy it and paste in the following step.
 > 
