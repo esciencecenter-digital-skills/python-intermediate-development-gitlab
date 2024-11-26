@@ -45,7 +45,7 @@ This is where using a **debugger** can be useful.
 
 Let us add a new function called `patient_normalise()` to our inflammation example
 to normalise a given inflammation data array so that all entries fall between 0 and 1.
-(Make sure you create a new feature branch for this work off your `develop` branch.)
+
 To normalise each patient's inflammation data
 we need to divide it by the maximum inflammation experienced by that patient.
 To do so, we can add the following code to `inflammation/models.py`:
